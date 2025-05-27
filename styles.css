@@ -1,0 +1,521 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section,
+#home, #point, #hire-me, #packages {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.left-text {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-text h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.left-text .intro {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.left-text .intro .name {
+  color: #2CF285;
+}
+
+.left-text .mid {
+  font-size: 7rem;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.typing-text {
+  border-right: 2px solid #fff;
+  padding-right: 5px;
+  white-space: nowrap;
+  display: inline-block;
+  animation: blinkCursor 0.8s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.left-text .designer {
+  font-size: 7rem;
+  font-weight: 900;
+  margin-top: 5px;
+  line-height: 0.95;
+}
+
+.center-image {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.center-image img {
+  width: 900px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.right-logo {
+  position: absolute;
+  right: 50px;
+  top: 47%;
+  z-index: 1;
+}
+
+.right-logo img {
+  width: 700px;
+  height: auto;
+}
+
+.bottom-left,
+.bottom-right {
+  position: absolute;
+  bottom: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.bottom-right {
+  position: fixed;         /* Keep it fixed on screen */
+  right: 40px;
+  bottom: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+  z-index: 999;            /* Ensure it's above other elements */
+  background: transparent; /* Optional: can add background for readability */
+}
+
+
+.bottom-left {
+  left: 40px;
+}
+
+.bottom-right {
+  right: 40px;
+}
+
+#point {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.point-heading {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+.point-heading strong {
+  display: block;
+  font-weight: 700;
+}
+
+#projects {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project-wrapper {
+  display: flex;
+  height: 100%;
+  width: calc(100vw * 3);
+  transition: transform 0.9s ease-in-out;
+  will-change: transform;
+}
+
+.project-container,
+.project-section {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background-color: #2CF285;
+  color: #fff;
+  flex-direction: row;
+}
+
+.project-text {
+  max-width: 500px;
+}
+
+.project-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.project-tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-text strong {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.project-image .image-placeholder {
+  margin-right: 100px;
+  width: 500px;
+  height: 600px;
+  background-color: #28d275;
+  border-radius: 12px;
+}
+
+.hire-me-section {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px 0 200px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.hire-me-section .why-you-should {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2CF285;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hire-me-section .hire-me {
+  font-size: 7rem;
+  font-weight: 900;
+  margin: -10px 0 0 0;
+  line-height: 1;
+}
+
+.hire-me-section .paragraph {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 600px;
+  color: #ccc;
+  line-height: 1.4;
+  margin-top: 20px;
+}
+
+.packages-section {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+
+.card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2CF285;
+}
+
+.card-details {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: auto;
+}
+
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 40px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.message-me {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #2CF285;
+  margin-bottom: 20px;
+}
+
+.highlight-me {
+  font-size: 14rem;   /* bigger than the base size */
+  color: #fff;       /* white color */
+}
+
+
+.contact-info p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #fff;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #2CF285;
+}
+
+.contact-form button {
+  background-color: #2CF285;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #22c26b;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.social-icons i {
+  font-size: 32px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.social-icons i:hover {
+  color: #28d275;
+}
+
+@media (max-width: 768px) {
+  .left-text {
+    left: 20px;
+    top: 20%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  .left-text .intro {
+    font-size: 1.5rem;
+  }
+
+  .left-text .mid {
+    font-size: 4rem;
+  }
+
+  .left-text .designer {
+    font-size: 4rem;
+  }
+
+  .center-image img {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .right-logo {
+    display: none; /* Hide large logo on small screens */
+  }
+
+  .bottom-left,
+  .bottom-right {
+    font-size: 0.8rem;
+    bottom: 20px;
+  }
+
+  #point {
+    padding: 20px;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .point-heading {
+    font-size: 2rem;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+
+  .point-heading strong {
+    font-size: 2.2rem;
+  }
+  .hire-me-section {
+    padding: 40px 20px;
+    align-items: center;
+    text-align: left;
+    height: auto; /* allow content to expand naturally */
+  }
+
+  .hire-me-section .why-you-should {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .hire-me-section .hire-me {
+    font-size: 4.4rem;
+    margin-top: 10px;
+  }
+
+  .hire-me-section .paragraph {
+    font-size: 1.1rem;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .packages-section {
+    height: auto; /* Allow section to expand with content */
+    padding: 40px 15px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+    padding: 20px 18px;
+  }
+
+  .card-heading {
+    font-size: 1.5rem;
+  }
+
+  .card-details {
+    font-size: 0.95rem;
+  }
+
+  .card-price {
+    font-size: 1.1rem;
+  }
+  
+}
