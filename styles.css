@@ -19,7 +19,9 @@ html, body {
   height: 100vh;
   scroll-snap-align: start;
 }
-
+#point {
+  background-color: #22c26b;
+}
 .container {
   position: relative;
   width: 100%;
@@ -159,57 +161,44 @@ html, body {
   overflow: hidden;
 }
 
-.project-wrapper {
+.slider-track {
   display: flex;
+  width: 400vw; /* 4 projects */
   height: 100%;
-  width: calc(100vw * 4); /* Adjust for 4 projects */
-  transition: transform 0.9s ease-in-out;
-  will-change: transform;
+  transition: transform 0.8s ease-in-out;
 }
 
-.project-container {
-  width: 100vw;
+.slide {
+  flex: 0 0 100vw;
   height: 100vh;
-  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-navigation {
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 80px;
-  background-color: #2CF285;
-  color: #fff;
-  flex-direction: row;
+  gap: 20px;
+  z-index: 2;
 }
 
-.project-text {
-  max-width: 500px;
+.arrow i {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.project-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
+.arrow i:hover {
+  transform: scale(1.2);
 }
 
-.project-tagline {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
 
-.project-text strong {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
 
-.project-image .image-placeholder {
-  margin-right: 100px;
-  width: 500px;
-  height: 600px;
-  background-color: #28d275;
-  border-radius: 12px;
-}
+
 
 .hire-me-section {
   background-color: #000;
@@ -410,6 +399,65 @@ html, body {
 .social-icons i:hover {
   color: #28d275;
 }
+
+
+
+@media (max-width: 1366px) {
+  .left-text {
+    left: 50px;
+    top: 45%;
+  }
+
+  .left-text .intro {
+    font-size: 3rem;
+  }
+
+  .left-text .mid,
+  .left-text .designer {
+    font-size: 5rem;
+  }
+
+  .center-image img {
+    width: 700px;
+  }
+
+  .right-logo img {
+    width: 400px;
+  }
+
+  .point-heading {
+    font-size: 3rem;
+  }
+  
+  
+  .slide {
+    flex: 0 0 100vw;
+    height: 100vh;
+    background-size: contain; /* Prevents zoom/crop issues */
+  }
+
+  .hire-me-section {
+    padding: 0 200px;
+  }
+
+  .hire-me-section .hire-me {
+    font-size: 4rem;
+  }
+
+  .highlight-me {
+    font-size: 7rem;
+  }
+
+  .cards-container {
+    gap: 20px;
+  }
+
+  .card {
+    width: 220px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .left-text {

@@ -28,86 +28,23 @@ function type() {
 type();
 
 
+let currentProject = 0;
+    const totalProjects = 4;
+    const sliderTrack = document.getElementById('sliderTrack');
 
-const projectSection = document.getElementById('projects');
-const projectWrapper = document.querySelector('.project-wrapper');
-const projects = document.querySelectorAll('.project-container');
-const totalProjects = projects.length;
-
-let currentIndex = 0;
-let isScrollingHorizontally = false;
-let scrollDelta = 0;
-const scrollThreshold = 100;
-
-function isSectionInView(section) {
-  const rect = section.getBoundingClientRect();
-  const midScreen = window.innerHeight / 2;
-  return rect.top <= midScreen && rect.bottom >= midScreen;
-}
-
-// To allow vertical scroll after hitting boundaries and waiting
-let allowVerticalScrollAfterBoundary = false;
-let boundaryTimeout;
-
-projectSection.addEventListener('wheel', (e) => {
-  if (!isSectionInView(projectSection)) return;
-
-  const goingDown = e.deltaY > 0;
-  const goingUp = e.deltaY < 0;
-
-  // At boundaries
-  const atFirstProject = currentIndex === 0;
-  const atLastProject = currentIndex === totalProjects - 1;
-
-  // If at boundary and user scrolls vertically, allow vertical scroll only if flag true
-  if ((atFirstProject && goingUp) || (atLastProject && goingDown)) {
-    if (allowVerticalScrollAfterBoundary) {
-      // Allow normal vertical scroll
-      return;
-    } else {
-      e.preventDefault();
-      // Start timer to allow vertical scroll after 500ms delay
-      clearTimeout(boundaryTimeout);
-      boundaryTimeout = setTimeout(() => {
-        allowVerticalScrollAfterBoundary = true;
-      }, 500);
-      return;
+    function showProject(index) {
+      sliderTrack.style.transform = `translateX(-${index * 100}vw)`;
     }
-  }
 
-  // Reset vertical scroll permission when inside projects horizontally
-  allowVerticalScrollAfterBoundary = false;
-
-  // Prevent vertical scroll when handling horizontal
-  e.preventDefault();
-
-  if (isScrollingHorizontally) return;
-
-  scrollDelta += e.deltaY;
-
-  if (scrollDelta >= scrollThreshold) {
-    if (currentIndex < totalProjects - 1) {
-      currentIndex++;
-      scrollDelta = 0;
-      slideTo(currentIndex);
-    } else {
-      scrollDelta = scrollThreshold; // clamp
+    function showNextProject() {
+      currentProject = (currentProject + 1) % totalProjects;
+      showProject(currentProject);
     }
-  } else if (scrollDelta <= -scrollThreshold) {
-    if (currentIndex > 0) {
-      currentIndex--;
-      scrollDelta = 0;
-      slideTo(currentIndex);
-    } else {
-      scrollDelta = -scrollThreshold; // clamp
-    }
-  }
-}, { passive: false });
 
-function slideTo(index) {
-  isScrollingHorizontally = true;
-  projectWrapper.style.transform = `translateX(-${index * 100}vw)`;
-  setTimeout(() => {
-    isScrollingHorizontally = false;
-  }, 700);
-}
+    function showPreviousProject() {
+      currentProject = (currentProject - 1 + totalProjects) % totalProjects;
+      showProject(currentProject);
+    }
+
+    // Initial load
+    showProject(currentProject);

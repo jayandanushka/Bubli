@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -59,56 +61,23 @@
 
     
   <section id="projects" class="section project-section">
-    <div class="project-wrapper">
-      <div class="project-container">
-        <div class="project-text">
-          <h2 class="project-title">Project 01</h2>
-          <p class="project-tagline">Level up your brand.</p>
-          <p><strong>look better,</strong><br><strong>Sell more,</strong><br><strong>grow faster.</strong></p>
-        </div>
-        <div class="project-image">
-          <div class="image-placeholder"></div>
-        </div>
+    <div class="project-navigation">
+      <div class="arrow arrow-left" onclick="showPreviousProject()">
+        <i class="bi bi-arrow-left-circle"></i>
       </div>
-
-      <div class="project-container">
-        <div class="project-text">
-          <h2 class="project-title">Project 02</h2>
-          <p class="project-tagline">Innovative Design Solutions.</p>
-          <p><strong>unique style,</strong><br><strong>creative impact,</strong><br><strong>strong brand.</strong></p>
-        </div>
-        <div class="project-image">
-          <div class="image-placeholder"></div>
-        </div>
+      <div class="arrow arrow-right" onclick="showNextProject()">
+        <i class="bi bi-arrow-right-circle"></i>
       </div>
-
-      <div class="project-container">
-        <div class="project-text">
-          <h2 class="project-title">Project 03</h2>
-          <p class="project-tagline">Innovative Design Solutions.</p>
-          <p><strong>unique style,</strong><br><strong>creative impact,</strong><br><strong>strong brand.</strong></p>
-        </div>
-        <div class="project-image">
-          <div class="image-placeholder"></div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="project-text">
-          <h2 class="project-title">Project 04</h2>
-          <p class="project-tagline">Innovative Design Solutions.</p>
-          <p><strong>unique style,</strong><br><strong>creative impact,</strong><br><strong>strong brand.</strong></p>
-        </div>
-        <div class="project-image">
-          <div class="image-placeholder"></div>
-        </div>
-      </div>
-      <!-- add more projects -->
-      
     </div>
-    
-    
+
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide" style="background-image: url('Pro.jpg');"></div>
+      <div class="slide" style="background-image: url('Pro.jpg');"></div>
+      <div class="slide" style="background-image: url('Pro.jpg');"></div>
+      <div class="slide" style="background-image: url('Pro.jpg');"></div>
+    </div>
   </section>
+  
 
 
 
@@ -126,7 +95,7 @@
   <section id="packages" class="section packages-section">
     <div class="cards-container">
       <div class="card">
-        <h3 class="card-heading">Custom Design Work </h3>
+        <h3 class="card-heading">Custom</h3>
         <p class="card-details">
           For any custom design like book <br>
           covers, posters, packaging, signboards,
@@ -138,7 +107,7 @@
       </div>
 
       <div class="card">
-        <h3 class="card-heading">Basic Idea Pack </h3>
+        <h3 class="card-heading">Basic Idea </h3>
         <p class="card-details">
           Concept discussion & brainstorming<br>
           Sketch and rough layout (no final design)<br>
@@ -148,7 +117,7 @@
       </div>
 
       <div class="card">
-        <h3 class="card-heading">Logo Design Pack</h3>
+        <h3 class="card-heading">Logo Design</h3>
         <p class="card-details">
           1 custom logo
           Color scheme selection
@@ -159,7 +128,7 @@
       </div>
 
       <div class="card">
-        <h3 class="card-heading">Full Branding Pack </h3>
+        <h3 class="card-heading">Full Branding</h3>
         <p class="card-details">
           Custom logo design
           Brand color palette
