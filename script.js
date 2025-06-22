@@ -1,4 +1,4 @@
-const words = ["Logo", "Social Media", "Branding", "Ad Creative", "Banners", "Cover", "Packaging", "Story"];
+const words = ["Logo", "Social Media", "Branding", "Creative", "Banners", "Cover", "Packaging", "Branding"];
 const typingText = document.querySelector(".typing-text");
 
 let wordIndex = 0;
