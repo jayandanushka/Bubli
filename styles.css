@@ -498,17 +498,9 @@ html, body {
     text-align: left;
   }
 
-  .left-text .intro {
-    font-size: 1.5rem;
-  }
-
-  .left-text .mid {
-    font-size: 4rem;
-  }
-
-  .left-text .designer {
-    font-size: 4rem;
-  }
+  .left-text .intro { font-size: 1.5rem; }
+  .left-text .mid,
+  .left-text .designer { font-size: 4rem; }
 
   .center-image img {
     width: 100%;
@@ -517,25 +509,19 @@ html, body {
     margin-bottom: 30px;
   }
 
-  .right-logo {
-    display: none; /* Hide large logo on small screens */
-  }
+  .right-logo,
+  .bottom-left { display: none; }
 
-  .bottom-left{
-    display: none;
-  }
   .bottom-right {
     font-size: 0.6rem;
-    position: absolute;      /* Required for bottom positioning */
-    bottom:70px;
-    left: 50%;               /* Start at the horizontal center */
-    transform: translateX(-50%); /* Shift left by 50% of its width to truly center it */
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
-  
 
   #point {
-    
     text-align: left;
     flex-direction: column;
   }
@@ -546,17 +532,16 @@ html, body {
     padding: 0 10px;
   }
 
-  .point-heading strong {
-    font-size: 2.2rem;
-  }
-  .slider-track {
-    width: 400vw; /* Keep this if you still have 4 slides */
+  .point-heading strong { font-size: 2.2rem; }
+
+  .slider-track,
+  .slide {
+    width: 400vw;
     height: 100vh;
   }
 
   .slide {
     flex: 0 0 100vw;
-    height: 100vh;
     background-size: cover;
     background-position: center;
   }
@@ -564,7 +549,6 @@ html, body {
   .slide img {
     width: 100%;
     height: auto;
-    display: block;
   }
 
   .project-navigation {
@@ -573,82 +557,41 @@ html, body {
     gap: 12px;
   }
 
-  .arrow i {
-    font-size: 2rem;
-  }
-  
+  .arrow i { font-size: 2rem; }
+
   .hire-me-section {
     padding: 40px 20px;
     align-items: center;
     text-align: left;
-    height: auto; /* allow content to expand naturally */
+    height: auto;
   }
 
-  .hire-me-section .why-you-should {
-    font-size: 2rem;
-    line-height: 1.4;
-  }
-
-  .hire-me-section .hire-me {
-    font-size: 4.4rem;
-    margin-top: 10px;
-  }
-
+  .hire-me-section .why-you-should { font-size: 2rem; line-height: 1.4; }
+  .hire-me-section .hire-me { font-size: 4.4rem; margin-top: 10px; }
   .hire-me-section .paragraph {
     font-size: 1.1rem;
     max-width: 100%;
     margin-top: 20px;
   }
 
-  .packages-section {
-    height: auto; /* Allow section to expand with content */
-    padding: 40px 15px;
-  }
-
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    gap: 20px;
-  }
-
-  .card {
-    width: 90%;
-    max-width: 320px;
-    padding: 20px 18px;
-  }
-
-  .card-heading {
-    font-size: 1.5rem;
-  }
-
-  .card-details {
-    font-size: 0.95rem;
-  }
-
-  .card-price {
-    font-size: 1.1rem;
-  }
-
   #projects {
     height: auto;
-    overflow: visible;
+    overflow: hidden;
   }
 
-  .project-wrapper {
+  .project-wrapper,
+  .project-container {
     flex-direction: column;
-    height: auto;
     width: 100vw;
+    height: auto;
     transform: none !important;
   }
 
   .project-container {
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
     padding: 40px 20px;
     text-align: center;
     justify-content: center;
+    height: 100vh;
   }
 
   .project-image .image-placeholder {
@@ -669,35 +612,24 @@ html, body {
   }
 
   #project-nav button {
-    background-color: #28d275;
     color: white;
     border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     font-size: 2rem;
-    cursor: pointer;
   }
-  
-  .contact-section {
-    padding-bottom: 50px; /* Adds space at the bottom */
-  }
-  
+
+  .contact-section { padding-bottom: 50px; }
+
   .contact-left,
   .contact-right {
     max-width: 100%;
     flex: 1 1 100%;
   }
 
-  .message-me {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .highlight-me {
-    font-size: 6rem;
-    text-align: center;
-  }
+  .message-me { font-size: 2rem; text-align: center; }
+  .highlight-me { font-size: 6rem; text-align: center; }
 
   .contact-info p {
     font-size: 0.9rem;
@@ -715,9 +647,8 @@ html, body {
     margin: 5px;
     padding: 10px 12px;
   }
-  .contact-form textarea {
-    height: 100px;
-  }
+
+  .contact-form textarea { height: 100px; }
 
   .contact-form button {
     font-size: 1rem;
@@ -735,7 +666,67 @@ html, body {
     font-size: 30px;
     margin: 10px;
   }
-  
 
-  
+  .packages-section {
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 300px 15px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 300px;
+    background-color: #111;
+    border-radius: 12px;
+    padding: 10px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .card:hover { transform: none; }
+
+  .card-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2CF285;
+  }
+
+  .card-details {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+
+  .card-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: auto;
+  }
+
+  /* Scrollbar styling */
+  .packages-section::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .packages-section::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  .packages-section::-webkit-scrollbar-thumb {
+    background-color: #2CF285;
+    border-radius: 10px;
+  }
 }
