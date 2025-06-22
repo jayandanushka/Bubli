@@ -19,6 +19,7 @@ html, body {
   height: 100vh;
   scroll-snap-align: start;
 }
+
 #point {
   background-color: #22c26b;
 }
@@ -224,7 +225,7 @@ html, body {
   font-size: 7rem;
   font-weight: 900;
   margin: -10px 0 0 0;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .hire-me-section .paragraph {
@@ -245,7 +246,7 @@ html, body {
   justify-content: center;
   padding: 0 20px;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
+  text-align: left;
   overflow-x: hidden;
 }
 
