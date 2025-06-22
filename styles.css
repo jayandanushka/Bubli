@@ -534,30 +534,51 @@ html, body {
 
   .point-heading strong { font-size: 2.2rem; }
 
-  .slider-track,
-  .slide {
+  
+  
+  .slider-track {
     width: 400vw;
     height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
   }
-
-  .slide {
-    flex: 0 0 100vw;
-    background-size: cover;
-    background-position: center;
-  }
-
+  
+  /* Ensure images fully fit mobile screen */
   .slide img {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Cover the whole slide, maintain aspect ratio */
+    display: block;
   }
-
+  
+  /* Overlay arrows at the bottom over the image */
   .project-navigation {
+    position: absolute;
     bottom: 20px;
-    right: 20px;
-    gap: 12px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centered horizontally */
+    gap: 10px;
+    z-index: 10;
+    pointer-events: none; /* Let clicks pass through by default */
   }
-
-  .arrow i { font-size: 2rem; }
+  
+  .arrow {
+    pointer-events: auto; /* Allow clicks on arrows */
+    padding: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow i {
+    font-size: 3rem;
+    color: white;
+  }
+  
 
   .hire-me-section {
     padding: 40px 20px;
@@ -574,6 +595,8 @@ html, body {
     margin-top: 20px;
   }
 
+
+  
   #projects {
     height: auto;
     overflow: hidden;
@@ -597,28 +620,10 @@ html, body {
   .project-image .image-placeholder {
     margin: 20px auto 0;
     width: 80%;
-    height: 300px;
+    height: 400px;
   }
 
-  #project-nav {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    z-index: 999;
-  }
-
-  #project-nav button {
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-  }
+  
 
   .contact-section { padding-bottom: 50px; }
 

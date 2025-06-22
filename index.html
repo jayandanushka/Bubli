@@ -1,213 +1,196 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jayan | Brand Designer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayan | Brand Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
 
-  </head> 
-      
-      <div class="scroll-container">
-        
-    
-      <!-- Home Section -->
-      <div id="home" class="section container">
-        <div class="container">
-          <div class="left-text">
-            <h1>
-              <div class="intro">Hello I am <span class="name">Jayan</span></div>
-              <div class="mid">Your<br /><span class="typing-text"></span></div>
-              <div class="designer">Designer</div>
-            </h1>
-          </div>
-          <div class="center-image">
-            <img src="x.png" alt="Jayan" />
-          </div>
+<body>
+  <div class="scroll-container">
 
-          <div class="right-logo">
-            <h1>
-              <div class="greeting">simple</div>
-              <div class="brand-name">smart</div>
-              <div class="role">Strategic</div>
-            </h1>
-          </div>
+    <!-- Home Section -->
+    <div id="home" class="section">
+      <div class="container">
+        <div class="left-text">
+          <h1>
+            <div class="intro">Hello I am <span class="name">Jayan</span></div>
+            <div class="mid">Your<br /><span class="typing-text"></span></div>
+            <div class="designer">Designer</div>
+          </h1>
+        </div>
 
-          <div class="bottom-left">Colombo, Sri Lanka</div>
-          <div class="bottom-right">© 2025 Jayan | Brand Designer. All rights reserved.</div>
+        <div class="center-image">
+          <img src="x.png" alt="Jayan" />
+        </div>
+
+        <div class="right-logo">
+          <h1>
+            <div class="greeting">simple</div>
+            <div class="brand-name">smart</div>
+            <div class="role">Strategic</div>
+          </h1>
+        </div>
+
+        <div class="bottom-left">Colombo, Sri Lanka</div>
+        <div class="bottom-right">© 2025 Jayan | Brand Designer. All rights reserved.</div>
+      </div>
+    </div>
+
+    <!-- Point Section -->
+    <div id="point" class="section container">
+      <h1 class="point-heading">
+        Level up your<br />
+        Service or Product.<br />
+        <strong>look better,</strong>
+        <strong>Sell more,</strong>
+        <strong>grow faster.</strong>
+      </h1>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section project-section">
+      <div class="project-navigation">
+        <div class="arrow arrow-left" onclick="showPreviousProject()">
+          <i class="bi bi-arrow-left-circle"></i>
+        </div>
+        <div class="arrow arrow-right" onclick="showNextProject()">
+          <i class="bi bi-arrow-right-circle"></i>
         </div>
       </div>
-    
-    <!-- Point Section -->
-  <div id="point" class="section container">
-    <h1 class="point-heading">
-      Level up your<br />
-      Service or Product.<br/>
-      <strong>look better,</strong>
-      <strong>Sell more,</strong>
-      <strong>grow faster.</strong>
-    </h1>
+
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide">
+          <picture>
+            <source srcset="ai.jpg" media="(max-width: 768px)">
+            <img src="Pro.jpg" alt="Project 1" />
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source srcset="ab.jpg" media="(max-width: 768px)">
+            <img src="Pro.jpg" alt="Project 2" />
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source srcset="ai.jpg" media="(max-width: 768px)">
+            <img src="Pro.jpg" alt="Project 3" />
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source srcset="ai.jpg" media="(max-width: 768px)">
+            <img src="Pro.jpg" alt="Project 4" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hire Me Section -->
+    <section id="hire-me" class="section hire-me-section">
+      <h1 class="why-you-should">Why You Should</h1>
+      <h1 class="hire-me">Hire Me</h1>
+      <p class="paragraph">
+        Speed. Precision. Creativity. <br>
+        I deliver high-impact design fast — without cutting corners. <br>
+        You bring the vision, I bring the fire. Let’s win.
+      </p>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="section packages-section">
+      <div class="cards-container">
+
+        <div class="card">
+          <h3 class="card-heading">Custom</h3>
+          <p class="card-details">
+            For any custom design like book covers, posters, packaging, signboards, wall art, music covers, etc.<br>
+            Price depends on project type and complexity.
+          </p>
+          <p class="card-price">Up to Rs. 2,000</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-heading">Basic Idea</h3>
+          <p class="card-details">
+            Concept discussion & brainstorming<br>
+            Sketch and rough layout (no final design)<br>
+            Creative guidance and support
+          </p>
+          <p class="card-price">Up to Rs. 1,000</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-heading">Logo Design</h3>
+          <p class="card-details">
+            1 custom logo<br>
+            Color scheme selection<br>
+            Font (typography) selection<br>
+            Files in PNG, JPEG, and PDF formats
+          </p>
+          <p class="card-price">Up to Rs. 3,000</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-heading">Full Branding</h3>
+          <p class="card-details">
+            Custom logo design<br>
+            Brand color palette<br>
+            Font selection<br>
+            Business card & letterhead design<br>
+            Social media kit (profile, cover, post templates)<br>
+            Unlimited revisions<br>
+            All source files (AI, PSD, PDF, PNG, JPEG)
+          </p>
+          <p class="card-price">Up to Rs. 20,000</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section container contact-section">
+      <div class="contact-left">
+        <h2 class="message-me">
+          Message <br />
+          <span class="highlight-me">Me</span>
+        </h2>
+
+        <div class="social-icons">
+          <a href="https://wa.me/94786471826?text=Hello%2C%20I%20am%20interested%21" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://web.facebook.com/profile.php?id=61569496732664" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/jayan_bubli/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="contact-info">
+          <p>bublidesign@cloud.com</p>
+          <p>078 647 18 26</p>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <input type="text" id="contact" name="contact" placeholder="Email or phone" required />
+          <textarea id="message" name="message" placeholder="Your message" rows="12" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
   </div>
 
-    
-  <section id="projects" class="section project-section">
-    <div class="project-navigation">
-      <div class="arrow arrow-left" onclick="showPreviousProject()">
-        <i class="bi bi-arrow-left-circle"></i>
-      </div>
-      <div class="arrow arrow-right" onclick="showNextProject()">
-        <i class="bi bi-arrow-right-circle"></i>
-      </div>
-    </div>
-  
-    <div class="slider-track" id="sliderTrack">
-      <div class="slide">
-        <picture>
-          <source srcset="ai.jpg" media="(max-width: 768px)">
-          <img src="Pro.jpg" alt="Project 1" />
-        </picture>
-      </div>
-      <div class="slide">
-        <picture>
-          <source srcset="ai.jpg" media="(max-width: 768px)">
-          <img src="Pro.jpg" alt="Project 2" />
-        </picture>
-      </div>
-      <div class="slide">
-        <picture>
-          <source srcset="ai.jpg" media="(max-width: 768px)">
-          <img src="Pro.jpg" alt="Project 3" />
-        </picture>
-      </div>
-      <div class="slide">
-        <picture>
-          <source srcset="ai.jpg" media="(max-width: 768px)">
-          <img src="Pro.jpg" alt="Project 4" />
-        </picture>
-      </div>
-    </div>
-  </section>
-  
-  
-
-
-
-  <section id="hire-me" class="section hire-me-section">
-    <h1 class="why-you-should">Why You Should</h1>
-    <h1 class="hire-me">Hire Me</h1>
-    <p class="paragraph">
-      Speed. Precision. Creativity. <br>I deliver high-impact design<br>  fast — without cutting corners. <br>
-      You bring the vision,<br> I bring the fire. Let’s win.
-    </p>
-  </section>
-  
-
-
-  <section id="packages" class="section packages-section">
-    <div class="cards-container">
-      <div class="card">
-        <h3 class="card-heading">Custom</h3>
-        <p class="card-details">
-          For any custom design like book
-          covers, posters, packaging, signboards,
-          wall art, music covers, etc.<br>
-          Price depends on project type and
-          complexity.
-        </p>
-        <p class="card-price">Up to Rs. 2,000</p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-heading">Basic Idea </h3>
-        <p class="card-details">
-          Concept discussion & brainstorming<br>
-          Sketch and rough layout (no final design)<br>
-          Creative guidance and support<br>
-        </p>
-        <p class="card-price">Up to Rs. 1,000</p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-heading">Logo Design</h3>
-        <p class="card-details">
-          1 custom logo
-          Color scheme selection
-          Font (typography) selection
-          Files in PNG, JPEG, and PDF formats
-        </p>
-        <p class="card-price">Up to Rs. 3,000</p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-heading">Full Branding</h3>
-        <p class="card-details">
-          Custom logo design
-          Brand color palette
-          Font selection
-          Business card & letterhead design
-          Social media kit (profile, cover, post templates)
-          Unlimited revisions
-          All source files (AI, PSD, PDF, PNG, JPEG)
-        </p>
-        <p class="card-price">Up to Rs. 20,000</p>
-      </div>
-    </div>
-  </section>
-
-
-      
-
-    
-  <section id="contact" class="section container contact-section">
-    <div class="contact-left">
-      <h2 class="message-me">
-        Message <br />
-        <span class="highlight-me">Me</span>
-      </h2>
-
-      <!-- Then use icons like this -->
-<div class="social-icons">
-  <a href="https://wa.me/94786471826?text=Hello%2C%20I%20am%20interested%21" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-  </a>
-  <a href="https://web.facebook.com/profile.php?id=61569496732664" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://www.instagram.com/jayan_bubli/" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
-
-      <div class="contact-info">
-        <p>bublidesign@cloud.com</p>
-        <p>078 647 18 26</p>
-      </div>
-    </div>
-
-    <div class="contact-right">
-      <form class="contact-form" id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Your name" required />
-    
-        <input type="text" id="contact" name="contact" placeholder="Email or phone" required />
-    
-        <textarea id="message" name="message" placeholder="Your message" rows="12" required></textarea>
-    
-        <button type="submit">Send</button>
-      </form>
-    </div>
-    
-
-</div>
-
-    
-      <script src="script.js"></script>
-    </body>
-    </html>
-    
-
-
-    
+  <script src="script.js"></script>
+</body>
+</html>
