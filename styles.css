@@ -34,7 +34,7 @@ html, body {
 
 .left-text {
   position: absolute;
-  left: 100px;
+  left: 180px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -45,9 +45,9 @@ html, body {
 }
 
 .left-text .intro {
-  font-size: 2rem;
+  font-size: 2.75rem;
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .left-text .intro .name {
@@ -55,9 +55,9 @@ html, body {
 }
 
 .left-text .mid {
-  font-size: 7rem;
-  font-weight: 500;
-  margin-top: 10px;
+  font-size: 9.5rem;
+  font-weight: 800;
+  margin-top: 5px;
   line-height: 1;
 }
 
@@ -75,17 +75,12 @@ html, body {
   }
 }
 
-.left-text .designer {
-  font-size: 9rem;
-  font-weight: 900;
-  margin-top: 5px;
-  line-height: 0.95;
-}
+
 
 .center-image {
   position: relative;
   z-index: 2;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .center-image img {
@@ -97,36 +92,29 @@ html, body {
 .right-logo {
   position: absolute;
   right: 100px;
-  top: 54%;
+  top: 50%;
   transform: translateY(-50%);
-  text-align: right;
+  text-align: left;
 }
 
 .right-logo h1 {
   margin: 0;
-  line-height: 1.2;
+  line-height: 1;
 }
 
-.right-logo .greeting {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-.right-logo .brand-name {
-  font-size: 3.3rem;
+.right-logo .mid {
+  font-size: 3.5rem;
   font-weight: 500;
   margin-top: 10px;
-  line-height: 1.2;
-}
-.right-logo .role {
-  font-size: 5rem;
-  font-weight: 900;
-  margin-top: 5px;
-  line-height: 0.95;
-  color: #2CF285;
+  line-height: 1;
 }
 
+.right-logo .designer{
+  font-size: 6rem;
+  font-weight: 900;
+  margin-top: 25px;
+  line-height: 0.95;
+}
 
 
 .bottom-left,
@@ -168,7 +156,7 @@ html, body {
 
 .point-heading {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1.25;
   font-weight: 300;
 }
@@ -247,7 +235,7 @@ html, body {
   font-size: 3rem;
   font-weight: 600;
   color: #2CF285;
-  line-height: 1.6;
+  line-height: 1;
   margin: 0;
 }
 
@@ -264,7 +252,7 @@ html, body {
   max-width: 600px;
   color: #ccc;
   line-height: 1.4;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .packages-section {
@@ -285,15 +273,15 @@ html, body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 
 .card {
   background-color: #111;
   border-radius: 12px;
-  padding: 30px 25px;
-  width: 260px;
+  padding: 10px 25px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
