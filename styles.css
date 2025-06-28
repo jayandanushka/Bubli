@@ -152,6 +152,7 @@ html, body {
   justify-content: center;
   background-color: #000;
   color: #fff;
+  height: 100vh;
 }
 
 .point-heading {
@@ -159,12 +160,21 @@ html, body {
   font-size: 3.5rem;
   line-height: 1.25;
   font-weight: 300;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .point-heading strong {
   display: block;
   font-weight: 700;
 }
+
+.point-heading.animate {
+  opacity: 2;
+  transform: scale(1);
+}
+
 
 #projects {
   position: relative;
@@ -481,14 +491,13 @@ html, body {
 @media (max-width: 768px) {
   .left-text {
     left: 20px;
-    top: 23%;
+    top: 10%;
     transform: translateY(-50%);
     text-align: left;
   }
 
   .left-text .intro { font-size: 1.5rem; }
-  .left-text .mid,
-  .left-text .designer { font-size: 4rem; }
+  .left-text .mid { font-size: 4rem; margin-top: 10px; }
 
   .center-image img {
     width: 100%;
@@ -497,7 +506,17 @@ html, body {
     margin-bottom: 30px;
   }
 
-  .right-logo,
+  .right-logo{
+
+    left: 20px;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+ 
+  .right-logo .mid,
+  .right-logo .designer { font-size: 4rem; }
+
   .bottom-left { display: none; }
 
   .bottom-right {

@@ -51,4 +51,19 @@ let currentProject = 0;
 
 
 
-    
+    const heading = document.querySelector(".point-heading");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      heading.classList.add("animate");    // Scroll into view — add animation
+    } else {
+      heading.classList.remove("animate"); // Scroll out of view — remove animation
+    }
+  });
+}, {
+  threshold: 0.5  // triggers when 50% visible
+});
+
+observer.observe(heading);
+
