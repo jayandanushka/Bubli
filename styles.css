@@ -20,6 +20,7 @@ html, body {
   scroll-snap-align: start;
 }
 
+
 #point {
   background-color: #22c26b;
 }
@@ -118,13 +119,6 @@ html, body {
 
 
 .bottom-left,
-.bottom-right {
-  position: absolute;
-  bottom: 30px;
-  font-size: 0.75rem;
-  font-weight: 300;
-}
-
 .bottom-right {
   position: fixed;         /* Keep it fixed on screen */
   right: 40px;
@@ -288,7 +282,7 @@ html, body {
 
 
 .card {
-  background-color: #111;
+  background: #1d1d1d;
   border-radius: 12px;
   padding: 10px 25px;
   width: 200px;
@@ -336,6 +330,7 @@ html, body {
   padding: 40px;
   height: 100vh;
   box-sizing: border-box;
+  padding-bottom: 120px;
 }
 
 .contact-left,
@@ -369,7 +364,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: #111;
+  background: #1d1d1d;
   padding: 20px;
   border-radius: 12px;
   margin-top: 50px;
@@ -433,26 +428,35 @@ html, body {
 
 @media (max-width: 1366px) {
   .left-text {
-    left: 50px;
-    top: 45%;
+    left: 150px;
+    top: 50%;
   }
 
   .left-text .intro {
+    font-size: 2rem;
+  }
+
+  .left-text .mid{
+    font-size: 7rem;
+  }
+  .left-text .designer {
     font-size: 3rem;
   }
 
-  .left-text .mid,
-  .left-text .designer {
-    font-size: 5.5rem;
+  .right-logo .mid{
+    font-size: 2.5rem;
+  }
+  .right-logo .designer {
+    font-size: 4.5rem;
   }
 
+  .right-logo {
+    right: 100px;
+  }
   .center-image img {
     width: 700px;
   }
 
-  .right-logo img {
-    width: 400px;
-  }
 
   .point-heading {
     font-size: 3rem;
@@ -471,6 +475,7 @@ html, body {
 
   .hire-me-section .hire-me {
     font-size: 4rem;
+    margin: 10px 0 0 0;
   }
 
   .highlight-me {
