@@ -473,6 +473,16 @@ html, body {
     width: 700px;
   }
 
+  .logo-container {
+    width: 100px;
+    height: auto;
+  }
+
+
+.bottom-left {
+  left: 40px;
+  font-size: 0.65rem;
+}
 
   .point-heading {
     font-size: 3rem;
@@ -507,46 +517,61 @@ html, body {
   }
 }
 
-
-
 @media (max-width: 768px) {
+  /* Text Sections */
   .left-text {
     left: 20px;
-    top: 10%;
+    top: 140px;
     transform: translateY(-50%);
     text-align: left;
   }
 
-  .left-text .intro { font-size: 1.5rem; }
-  .left-text .mid { font-size: 4rem; margin-top: 10px; }
+  .left-text .intro {
+    font-size: 1.25rem;
+  }
+
+  .left-text .mid,
+  .right-logo .mid,
+  .right-logo .designer {
+    font-size: 3rem;
+    margin-top: 10px;
+  }
+
+  .right-logo {
+    left: 20px;
+    top: 35%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
 
   .center-image img {
     width: 100%;
     max-width: 100vw;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
-  .right-logo{
-
-    left: 20px;
-    top: 30%;
-    transform: translateY(-50%);
-    text-align: left;
+  .logo-container {
+    position: fixed;
+    top: 20px;
+    left: 290px;
+    z-index: 1000;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
   }
- 
-  .right-logo .mid,
-  .right-logo .designer { font-size: 4rem; }
 
-  .bottom-left { display: none; }
+  .bottom-left {
+    display: none;
+  }
 
   .bottom-right {
-    font-size: 0.6rem;
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    font-size: 0.72rem;
+    font-weight: 300;
+    z-index: 999;
+    background: transparent;
   }
 
   #point {
@@ -555,15 +580,16 @@ html, body {
   }
 
   .point-heading {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.3;
     padding: 0 10px;
   }
 
-  .point-heading strong { font-size: 2.2rem; }
+  .point-heading strong {
+    font-size: 2rem;
+  }
 
-  
-  
+  /* Slider */
   .slider-track {
     width: 400vw;
     height: 100vh;
@@ -571,60 +597,65 @@ html, body {
     position: relative;
     overflow: hidden;
   }
-  
-  /* Ensure images fully fit mobile screen */
+
   .slide img {
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Cover the whole slide, maintain aspect ratio */
+    object-fit: cover;
     display: block;
   }
-  
-  /* Overlay arrows at the bottom over the image */
+
   .project-navigation {
     position: absolute;
     bottom: 20px;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centered horizontally */
+    justify-content: center;
     gap: 10px;
     z-index: 10;
-    pointer-events: none; /* Let clicks pass through by default */
+    pointer-events: none;
   }
-  
+
   .arrow {
-    pointer-events: auto; /* Allow clicks on arrows */
-    padding: 50px;
+    pointer-events: auto;
+    padding: 0 20px 90px 0;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .arrow i {
     font-size: 3rem;
     color: white;
   }
-  
 
+  /* Hire Me Section */
   .hire-me-section {
-    padding: 40px 20px;
+    padding: 40px 10px;
     align-items: center;
     text-align: left;
     height: auto;
   }
 
-  .hire-me-section .why-you-should { font-size: 2rem; line-height: 1.4; }
-  .hire-me-section .hire-me { font-size: 4.4rem; margin-top: 10px; }
-  .hire-me-section .paragraph {
-    font-size: 1.1rem;
-    max-width: 100%;
-    margin-top: 20px;
+  .hire-me-section .why-you-should {
+    font-size: 1.9rem;
+    line-height: 1.2;
   }
 
+  .hire-me-section .hire-me {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
 
-  
+  .hire-me-section .paragraph {
+    font-size: 0.9rem;
+    max-width: 100%;
+    line-height: 1.9;
+  }
+
+  /* Projects Section */
   #projects {
     height: auto;
     overflow: hidden;
@@ -651,27 +682,35 @@ html, body {
     height: 400px;
   }
 
-  
-
-  .contact-section { padding-bottom: 50px; }
-
+  /* Contact Section */
   .contact-left,
   .contact-right {
     max-width: 100%;
     flex: 1 1 100%;
   }
 
-  .message-me { font-size: 2rem; text-align: center; }
-  .highlight-me { font-size: 6rem; text-align: center; }
+  .message-me {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .highlight-me {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   .contact-info p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
+    line-height: 1.5;
+    margin: 10px 0;
   }
 
   .contact-form {
-    margin-top: 10px;
-    padding: 15px;
+    margin-top: 5px;
+    padding: 10px;
   }
 
   .contact-form input,
@@ -681,7 +720,9 @@ html, body {
     padding: 10px 12px;
   }
 
-  .contact-form textarea { height: 100px; }
+  .contact-form textarea {
+    height: 100px;
+  }
 
   .contact-form button {
     font-size: 1rem;
@@ -700,6 +741,7 @@ html, body {
     margin: 10px;
   }
 
+  /* Packages Section */
   .packages-section {
     min-height: 100vh;
     overflow-y: auto;
@@ -725,7 +767,9 @@ html, body {
     margin: 10px;
   }
 
-  .card:hover { transform: none; }
+  .card:hover {
+    transform: none;
+  }
 
   .card-heading {
     font-size: 1.4rem;
@@ -749,7 +793,7 @@ html, body {
     margin-top: auto;
   }
 
-  /* Scrollbar styling */
+  /* Scrollbar */
   .packages-section::-webkit-scrollbar {
     width: 6px;
   }
