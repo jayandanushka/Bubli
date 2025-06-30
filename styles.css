@@ -275,6 +275,17 @@ html, body {
   margin-top: 0px;
 }
 
+.fade-section {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 2;
+  transform: translateY(1);
+}
+
 .packages-section {
   background-color: #000;
   color: #fff;
@@ -514,6 +525,7 @@ html, body {
 
   .card {
     width: 220px;
+    
   }
 }
 

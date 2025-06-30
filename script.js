@@ -50,20 +50,43 @@ let currentProject = 0;
     showProject(currentProject);
 
 
-
-    const heading = document.querySelector(".point-heading");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      heading.classList.add("animate");    // Scroll into view — add animation
-    } else {
-      heading.classList.remove("animate"); // Scroll out of view — remove animation
-    }
-  });
-}, {
-  threshold: 0.5  // triggers when 50% visible
-});
-
-observer.observe(heading);
-
+    document.addEventListener("DOMContentLoaded", () => {
+      // Observer for fade-in section (e.g. hire-me)
+      const fadeObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+        },
+        {
+          threshold: 0.1
+        }
+      );
+  
+      const fadeSection = document.querySelector('.fade-section');
+      if (fadeSection) {
+        fadeObserver.observe(fadeSection);
+      }
+  
+      // Observer for point-heading animation
+      const heading = document.querySelector(".point-heading");
+      if (heading) {
+        const headingObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              heading.classList.add("animate");
+            } else {
+              heading.classList.remove("animate");
+            }
+          });
+        }, {
+          threshold: 0.5
+        });
+  
+        headingObserver.observe(heading);
+      }
+    });
